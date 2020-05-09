@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { MultiSelect } from './multi-select';
+import { ControlledInput } from './controlled-input';
 
 function App() {
   return (
@@ -15,7 +16,14 @@ function App() {
           onChange={(val) => {
             console.log(JSON.stringify(val));
           }}
-        ></MultiSelect>
+          ad
+        />
+        <ControlledInput
+          value='uday'
+          callback={(changedValue) => {
+            console.log(changedValue);
+          }}
+        />
       </section>
     </div>
   );
