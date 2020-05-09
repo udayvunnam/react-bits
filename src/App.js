@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { MultiSelect } from './multi-select';
 import { ControlledInput } from './controlled-input';
+import { Modal } from './modal/index';
 
 function App() {
+  const [isModal, setIsModal] = useState(false);
+
   return (
     <div className='App'>
       <h1>My Components</h1>
@@ -22,6 +25,21 @@ function App() {
           value='uday'
           callback={(changedValue) => {
             console.log(changedValue);
+          }}
+        />
+        <button
+          onClick={() => {
+            setIsModal(true);
+          }}
+        >
+          Open Modal
+        </button>
+        <Modal
+          title='uday'
+          content='software Engineer'
+          isVisible={isModal}
+          onClose={() => {
+            setIsModal(false);
           }}
         />
       </section>
