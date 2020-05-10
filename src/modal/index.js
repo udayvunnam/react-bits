@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './index.css';
 
-export function Modal({ title, content, isVisible, onClose }) {
+export const Modal = ({ title, content, isVisible, onClose }) => {
   useEffect(() => {
     document.addEventListener('keydown', keydownHandler);
     return () => {
@@ -23,4 +23,4 @@ export function Modal({ title, content, isVisible, onClose }) {
       </div>
     </div>
   );
-}
+};

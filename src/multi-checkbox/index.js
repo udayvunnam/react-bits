@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-export function MultiSelect({ list = [], onChange }) {
+export const MultiCheckbox = ({ list = [], onChange }) => {
   const [data, setData] = React.useState(list);
 
   const toggle = (index) => {
@@ -29,4 +29,4 @@ export function MultiSelect({ list = [], onChange }) {
       })}
     </ol>
   );
-}
+};

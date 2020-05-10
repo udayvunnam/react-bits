@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { MultiSelect } from './multi-select';
+import { MultiCheckbox } from './multi-checkbox';
 import { ControlledInput } from './controlled-input';
 import { Modal } from './modal/index';
 
@@ -11,7 +11,7 @@ function App() {
     <div className='App'>
       <h1>My Components</h1>
       <section className='blocks'>
-        <MultiSelect
+        <MultiCheckbox
           list={[
             { label: 'mytr', checked: true },
             { label: 'yoiur', checked: false },

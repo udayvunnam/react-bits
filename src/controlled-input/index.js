@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 
-export function ControlledInput({ disabled, value, onChange, callback }) {
+export const ControlledInput = ({ value, callback }) => {
   const [data, setData] = React.useState(value);
   React.useEffect(() => {
     callback(data);
@@ -18,4 +18,4 @@ export function ControlledInput({ disabled, value, onChange, callback }) {
       ></input>
     </form>
   );
-}
+};
