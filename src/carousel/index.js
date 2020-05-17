@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Carousel = ({ children }) => {
-  return <div>My Tab</div>;
+  return <div>My Carousel</div>;
 };

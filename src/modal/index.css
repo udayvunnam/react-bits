@@ -16,7 +16,6 @@
 
 .modal-dialog {
   width: 100%;
-  max-width: 550px;
   background: white;
   position: relative;
   margin: 0 20px;
@@ -30,6 +29,8 @@
   -webkit-animation-duration: 0.4s;
   animation-name: slide-in;
   animation-duration: 0.5s;
+  min-height: 200px;
+  max-width: 500px;
 }
 
 @keyframes appear {

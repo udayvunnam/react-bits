@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const SimpleTable = ({ children }) => {
+export const useFetch = ({ children }) => {
   return <div>My Tab</div>;
 };

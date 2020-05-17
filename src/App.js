@@ -1,47 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { MultiCheckbox } from './multi-checkbox';
-import { ControlledInput } from './controlled-input';
-import { Modal } from './modal/index';
+import { ControlledInputDemo } from './controlled-input/demo';
+import { ModalDemo } from './modal/demo';
+import { MultiCheckboxDemo } from './multi-checkbox/demo';
 
 function App() {
-  const [isModal, setIsModal] = useState(false);
-
   return (
-    <div className='App'>
-      <h1>My Components</h1>
-      <section className='blocks'>
-        <MultiCheckbox
-          list={[
-            { label: 'mytr', checked: true },
-            { label: 'yoiur', checked: false },
-          ]}
-          onChange={(val) => {
-            console.log(JSON.stringify(val));
-          }}
-          ad
-        />
-        <ControlledInput
-          value='uday'
-          callback={(changedValue) => {
-            console.log(changedValue);
-          }}
-        />
-        <button
-          onClick={() => {
-            setIsModal(true);
-          }}
-        >
-          Open Modal
-        </button>
-        <Modal
-          title='uday'
-          content='software Engineer'
-          isVisible={isModal}
-          onClose={() => {
-            setIsModal(false);
-          }}
-        />
+    <div className='app'>
+      <h1 className='header'>React Bits</h1>
+      <section className='component-blocks'>
+        <ControlledInputDemo name='Controlled Input' />
+        <ModalDemo name='Modal' />
+        <MultiCheckboxDemo name='Multi Checkbox' />
       </section>
     </div>
   );
