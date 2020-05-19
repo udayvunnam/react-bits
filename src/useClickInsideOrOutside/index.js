@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 export const useClick = ({ ref, parent, onClickInside, onClickOutside }) => {
   const handleClick = (e) => {

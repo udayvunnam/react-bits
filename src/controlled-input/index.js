@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 
 export const ControlledInput = ({ value, callback }) => {
-  const [data, setData] = React.useState(value);
-  React.useEffect(() => {
+  const [data, setData] = useState(value);
+  useEffect(() => {
     callback(data);
   }, [callback, data]);
 
