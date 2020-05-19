@@ -3,15 +3,16 @@ import './App.css';
 import { ControlledInputDemo } from './controlled-input/demo';
 import { ModalDemo } from './modal/demo';
 import { MultiCheckboxDemo } from './multi-checkbox/demo';
-
+import { ImageFetchDemo } from './useFetch/demo';
+import { ClickInOrOutDemo } from './useClickInsideOrOutside/demo'
 const ComponentBlocks = ({ children }) => {
   return (
     <section className='component-blocks'>
       {React.Children.map(children, (child) => {
         return (
-          <div>
+          <div className="component-block">
             <h2 className='component-title'>{child.props.name}</h2>
-            {child}
+            <div className="component-view">{child}</div>
           </div>
         );
       })}
@@ -27,6 +28,8 @@ const App = () => {
         <MultiCheckboxDemo name='Multi Checkbox' />
         <ControlledInputDemo name='Controlled Input' />
         <ModalDemo name='Modal' />
+        <ImageFetchDemo name='useFetch' />
+        <ClickInOrOutDemo name="Click IN or OUT" />
       </ComponentBlocks>
     </div>
   );

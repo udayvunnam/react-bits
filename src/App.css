@@ -9,14 +9,29 @@
   justify-content: center;
 }
 
-.component-blocks > * {
+.component-block {
   margin: 20px;
-  min-width: 260px;
+  width: 300px;
+  height: 300px;
   border: 2px #117575 dashed;
   padding: 16px;
   border-radius: 4px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.component-view {
+  height: 264px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .component-title {
-  font-size: 12px;
+  font-size: 14px;
+  color: teal;
+  position: absolute;
+  margin: 0;
+  top: -10px;
+  background: #fff;
 }
