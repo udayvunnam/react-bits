@@ -1,16 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import { useClick } from './index';
 import './demo.css';
+import { ToastContext } from '../toast';
 
 export const ClickInOrOutDemo = () => {
   const clickRef = useRef();
   const outerRef = useRef(); // can be document object as well
+  const { notify } = useContext(ToastContext);
 
   const onClickInside = () => {
-    alert('clicked inside')
+    notify({ title: 'ClickInOrOutDemo', message: 'clicked inside', type: 'success' })
   };
   const onClickOutside = () => {
-    alert('clicked outside')
+    notify({ title: 'ClickInOrOutDemo', message: 'clicked outside', type: 'info' })
   };
   useClick({ ref: clickRef, parent: outerRef, onClickInside, onClickOutside });
 

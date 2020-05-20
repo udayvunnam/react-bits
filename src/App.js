@@ -4,7 +4,10 @@ import { ControlledInputDemo } from './controlled-input/demo';
 import { ModalDemo } from './modal/demo';
 import { MultiCheckboxDemo } from './multi-checkbox/demo';
 import { ImageFetchDemo } from './useFetch/demo';
-import { ClickInOrOutDemo } from './useClickInsideOrOutside/demo'
+import { ClickInOrOutDemo } from './useClickInsideOrOutside/demo';
+import { ToastDemo } from './toast/demo';
+import { ToastProvider } from './toast';
+
 const ComponentBlocks = ({ children }) => {
   return (
     <section className='component-blocks'>
@@ -22,16 +25,19 @@ const ComponentBlocks = ({ children }) => {
 
 const App = () => {
   return (
-    <div className='app'>
-      <h1 className='header'>React Bits</h1>
-      <ComponentBlocks>
-        <MultiCheckboxDemo name='Multi Checkbox' />
-        <ControlledInputDemo name='Controlled Input' />
-        <ModalDemo name='Modal' />
-        <ImageFetchDemo name='useFetch' />
-        <ClickInOrOutDemo name="Click IN or OUT" />
-      </ComponentBlocks>
-    </div>
+    <ToastProvider>
+      <div className='app'>
+        <h1 className='header'>React Bits</h1>
+        <ComponentBlocks>
+          <MultiCheckboxDemo name='Multi Checkbox' />
+          <ControlledInputDemo name='Controlled Input' />
+          <ModalDemo name='Modal' />
+          <ImageFetchDemo name='useFetch' />
+          <ClickInOrOutDemo name="Click IN or OUT" />
+          <ToastDemo name="Toast" />
+        </ComponentBlocks>
+      </div>
+    </ToastProvider>
   );
 };
 
