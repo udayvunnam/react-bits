@@ -15,19 +15,27 @@
   left: 8px;
 }
 .info {
-  background-color: #5bc0de;
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
 }
 .success {
-  background-color: #5cb85c;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
 }
 .warning {
-  background-color: #f0ad4e;
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
 }
 .error {
-  background-color: #d9534f;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 .notification-container {
-  position: absolute;
+  position: fixed;
   padding: 8px;
   border-radius: 4px;
   z-index: 100;
@@ -38,7 +46,6 @@
   width: 200px;
   border-radius: 4px;
   position: relative;
-  color: #fff;
 }
 .notification-title {
   padding: 8px;

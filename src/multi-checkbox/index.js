@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './index.css';
 
-export const MultiCheckbox = ({ list = [], onChange }) => {
+export const MultiCheckbox = ({ list = [], onChange, onChangeItem }) => {
   const [data, setData] = useState(list);
 
   const toggle = (index) => {
     data[index].checked = !data[index].checked;
     setData([...data]);
-    onChange(data);
+    if (onChange) { onChange(data) };
+    if (onChangeItem) { onChangeItem(`${data[index].label}: ${data[index].checked}`); }
   };
 
   return (

@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { MultiCheckbox } from './index';
-import { ToastContext } from '../toast';
+import { useToastActionsContext } from '../toast/ToastContext';
 
 export const MultiCheckboxDemo = () => {
-  const { notify } = useContext(ToastContext);
+  const toast = useToastActionsContext();
 
   const checkboxes = [
     {
@@ -19,5 +19,5 @@ export const MultiCheckboxDemo = () => {
       checked: false,
     },
   ];
-  return <MultiCheckbox list={checkboxes} onChange={(data) => notify({ title: 'MultiCheckboxDemo', message: JSON.stringify(data) })} />;
+  return <MultiCheckbox list={checkboxes} onChangeItem={(data) => toast({ title: 'MultiCheckboxDemo', message: data })} />;
 };

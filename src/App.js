@@ -5,8 +5,8 @@ import { ModalDemo } from './modal/demo';
 import { MultiCheckboxDemo } from './multi-checkbox/demo';
 import { ImageFetchDemo } from './useFetch/demo';
 import { ClickInOrOutDemo } from './useClickInsideOrOutside/demo';
-import { ToastDemo } from './toast/demo';
-import { ToastProvider } from './toast';
+import { ToastDemo } from './toast/ToastDemo';
+import { ToastProvider } from './toast/ToastContext';
 
 const ComponentBlocks = ({ children }) => {
   return (
