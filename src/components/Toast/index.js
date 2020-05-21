@@ -1,2 +1,2 @@
-export { useToastContext, useToastActionsContext, ToastProvider } from './ToastContext';
-export { ToastDemo } from './ToastDemo';
+export * from './ToastContext';
+export * from './ToastDemo';
