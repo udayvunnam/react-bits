@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import { useClick } from './index';
-import './demo.css';
-import { useToastActionsContext } from '../toast/ToastContext';
+import { useClick } from './useClick';
+import './index.css';
+import { useToastActionsContext } from '../../components/Toast';
 
 export const ClickInOrOutDemo = () => {
   const clickRef = useRef();

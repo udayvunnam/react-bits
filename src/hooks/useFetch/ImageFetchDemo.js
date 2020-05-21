@@ -1,6 +1,6 @@
 import React from 'react';
 import { useFetch } from './index';
-import './demo.css';
+import './index.css';
 
 export const ImageFetchDemo = () => {
   const { loading, error, response } = useFetch('https://dog.ceo/api/breeds/image/random');

@@ -1,12 +1,11 @@
 import React from 'react';
+import { ControlledInputDemo } from './components/ControlledInput';
+import { ModalDemo } from './components/Modal';
+import { MultiCheckboxDemo } from './components/MultiCheckbox';
+import { ImageFetchDemo } from './hooks/useFetch';
+import { ClickInOrOutDemo } from './hooks/useClickInsideOrOutside';
+import { ToastDemo, ToastProvider } from './components/Toast';
 import './App.css';
-import { ControlledInputDemo } from './controlled-input/demo';
-import { ModalDemo } from './modal/demo';
-import { MultiCheckboxDemo } from './multi-checkbox/demo';
-import { ImageFetchDemo } from './useFetch/demo';
-import { ClickInOrOutDemo } from './useClickInsideOrOutside/demo';
-import { ToastDemo } from './toast/ToastDemo';
-import { ToastProvider } from './toast/ToastContext';
 
 const ComponentBlocks = ({ children }) => {
   return (

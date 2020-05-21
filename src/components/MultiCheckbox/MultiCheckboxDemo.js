@@ -1,6 +1,6 @@
 import React from 'react';
-import { MultiCheckbox } from './index';
-import { useToastActionsContext } from '../toast/ToastContext';
+import { MultiCheckbox } from './MultiCheckbox';
+import { useToastActionsContext } from '../Toast/ToastContext';
 
 export const MultiCheckboxDemo = () => {
   const toast = useToastActionsContext();
