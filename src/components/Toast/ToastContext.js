@@ -45,8 +45,8 @@ export const ToastProvider = ({ children }) => {
     setNotifications([...notifications, notification]);
   };
 
-  const cancelNotification = (index) => {
-    setNotifications(notifications.filter((val, i) => i !== index))
+  const cancelNotification = (notification) => {
+    setNotifications(notifications.filter(item => item !== notification))
   };
 
   return (

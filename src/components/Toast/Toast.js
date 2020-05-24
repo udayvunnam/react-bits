@@ -9,7 +9,7 @@ export const Toast = ({ notifications, cancelNotification }) => {
         {notifications.map((notification, index) => {
           return (
             <div className={`notification ${notification.type || 'info'}`} key={index}>
-              <button className="notification-cancel" onClick={() => cancelNotification(index)}>X</button>
+              <button className="notification-cancel" onClick={() => cancelNotification(notification)}>X</button>
               <h3 className="notification-title">{notification.title}</h3>
               <p className="notification-message">{notification.message}</p>
               <div className="notification-timing" style={{ width: `${notification.detachTiming}%` }}></div>
